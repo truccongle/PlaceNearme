@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.truccongle.searchanything.Activity.MainActivity">
+    
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    app:titleTextColor="#faf7f6"
+    app:title="       Địa Điểm Gần Đây"
+    android:background="#1e4cc6"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize">
+
+</android.support.v7.widget.Toolbar>
+<ViewFlipper
+    android:id="@+id/viewflipper"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+</ViewFlipper>
+            <LinearLayout
+                android:background="#56a7c7"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:textColor="#d62f15"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:text="Địa điểm HOT nhất"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+            
+        </LinearLayout>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navitionview"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:src="@drawable/place_near_me"
+                android:layout_width="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_height="100dp" />
+            <TextView
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="65dp"
+                android:layout_marginLeft="25dp"
+                android:text="   Địa Điểm Gần Đây"
+                android:textStyle="bold|italic"
+                android:textSize="25dp"
+                android:textColor="#01000b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ListView
+                android:layout_marginTop="180dp"
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
